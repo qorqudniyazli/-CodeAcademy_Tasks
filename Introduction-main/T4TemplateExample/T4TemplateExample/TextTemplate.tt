@@ -1,0 +1,33 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+namespace CustomModels; 
+<# string[] tabloAdlari = {"Employee","Customer","Shipper","Product","Categories"};
+        var kolonAdlari = new Dictionary<string, string>
+        {
+            {"Id","int" },
+            {"CategoryName","string" },
+            {"Description","string" },
+            {"Country","string" },
+            {"City","string" },
+            {"Price","decimal" },
+        };
+
+
+foreach(string tabloAdi in tabloAdlari){#>
+public class <#=tabloAdi#>
+{
+<#
+foreach(var kolonAdi  in kolonAdlari){
+ #>
+ public <#=kolonAdi.Value#> <#=kolonAdi.Key#> { get; set; }
+ <#
+}
+#>
+}
+   <#} #>
+
+

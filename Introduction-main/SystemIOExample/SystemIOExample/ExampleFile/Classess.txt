@@ -1,0 +1,16 @@
+﻿Employe
+Customer
+Category
+Product
+Shipper
+Department
+Order
+OrderDetail
+Address
+Country
+City
+Town
+Contact
+
+
+Proje içerisinde Models klasörüne ayrı birer dosya olarak yazdırılacak. daha önce o qovluq içerisinde file var ise, silinecek ve yeniden oluşturulacak 
